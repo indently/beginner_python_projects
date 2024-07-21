@@ -27,10 +27,12 @@ def check_status(url: str) -> None:
         print(f'ERROR: {e}')
 
 
+# 5. Create a main entry point
 def main() -> None:
     url_to_check: str = 'https://www.indently.io'
     check_status(url_to_check)
 
 
+# 6. Run the script
 if __name__ == '__main__':
     main()
