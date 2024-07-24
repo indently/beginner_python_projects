@@ -69,6 +69,6 @@ if __name__ == '__main__':
 """
 Homework:
 1. Make it so that the save button saves the text to the current file if it already exists, instead
-of asking the user to create a new file each time
+of asking the user to create a new file each time.
 
 """

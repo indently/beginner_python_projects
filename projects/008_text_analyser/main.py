@@ -34,7 +34,7 @@ if __name__ == '__main__':
 
 """
 Homework:
-1. Create a much more user friendly message regarding the analysis (eg. "This text file contains...")
-2. Add the top 5 most common words to the analysis message
+1. Create a much more user friendly message regarding the analysis (eg. "This text file contains...").
+2. Add the top 5 most common words to the analysis message.
 
 """

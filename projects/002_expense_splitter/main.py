@@ -37,6 +37,6 @@ if __name__ == '__main__':
 Homework:
 1. Edit the script to give the user the option to enter uneven splits, such as 20%, 40%, 40%.
 2. Make it so that if the user encounters an error, the program nicely asks them to try again with
-a proper value
+a proper value.
 
 """

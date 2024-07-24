@@ -43,7 +43,7 @@ if __name__ == '__main__':
 Homework:
 1. Right now it works fine if you insert a rate that exists, but make it so that if the user
 enters a rate that doesn't exist, the program tells them that the currency is invalid, then
-show them a list of all the valid currency options
+show them a list of all the valid currency options.
 2. Edit the script so that the "to" currency can also be specified as euro. 
 3. [Hard] Instead of loading the data from a local JSON file, try loading the data from an API. 
 This task will require you to search online for a free API for currency exchange rates, and to make
