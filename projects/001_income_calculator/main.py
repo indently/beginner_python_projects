@@ -22,8 +22,8 @@ def calculate_finances(monthly_income: float, tax_rate: float, currency: str) ->
 # 4. Create a main entry point for the program
 def main() -> None:
     # 5. Gather user input
-    monthly_income: float = float(input('Enter your monthly income: ').strip())
-    tax_rate: float = float(input('Enter your tax rate (%): ').strip())
+    monthly_income: float = float(input('Enter your monthly income: '))
+    tax_rate: float = float(input('Enter your tax rate (%): '))
 
     # 6. Call the function
     calculate_finances(monthly_income, tax_rate, currency='KR')
