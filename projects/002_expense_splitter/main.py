@@ -2,8 +2,8 @@
 # 1. Create the function
 def calculate_split(total_amount: float, number_of_people: int, currency: str) -> None:
     # 2. Validate the amount of people
-    if number_of_people <= 0:
-        raise ValueError('Number of people must be greater than zero.')
+    if number_of_people < 1:
+        raise ValueError('Number of people must be greater than one.')
 
     # 3. Perform the calculation
     share_per_person: float = total_amount / number_of_people
@@ -18,8 +18,8 @@ def calculate_split(total_amount: float, number_of_people: int, currency: str) -
 def main() -> None:
     # 6. Try to get the user input and perform the calculation
     try:
-        total_amount = float(input('Enter the total amount of the expense: ').strip())
-        number_of_people = int(input('Enter the number of people sharing the expense: ').strip())
+        total_amount: float = float(input('Enter the total amount of the expense: '))
+        number_of_people: int = int(input('Enter the number of people sharing the expense: '))
 
         # Call the function to calculate and display expenses
         calculate_split(total_amount, number_of_people, currency='€')
