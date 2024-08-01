@@ -6,7 +6,7 @@ import string
 # Create a class
 class Password:
     # Initialize our class
-    def __init__(self, length=12, uppercase=True, symbols=True):
+    def __init__(self, length=12, uppercase=True, symbols=True) -> None:
         self.length = length
         self.use_uppercase = uppercase
         self.use_symbols = symbols
@@ -23,7 +23,7 @@ class Password:
             self.base_characters += self.symbols
 
     # Create a method to generate the password
-    def generate(self):
+    def generate(self) -> str:
         password: list[str] = []
 
         for i in range(self.length):

@@ -18,7 +18,7 @@ def analyse(text: str) -> dict[str, int]:
 
 
 # 3. Create a main entry point
-def main():
+def main() -> None:
     text: str = open_file(path='note.txt')
     analysis: dict[str, int] = analyse(text)
 

@@ -14,7 +14,6 @@ def check_status(url: str) -> None:
         headers: CaseInsensitiveDict[str] = response.headers
         content_type: str = headers.get('Content-Type', 'Unknown')
         server: str = headers.get('Server', 'Unknown')
-        url: str = response.url
         response_time: float = response.elapsed.total_seconds()
 
         # 4. Display the information regarding the URL

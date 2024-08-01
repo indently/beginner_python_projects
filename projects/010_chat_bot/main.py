@@ -29,7 +29,7 @@ class ChatBot:
             # 8. Update the highest similarity and best match if current similarity is higher
             if similarity > highest_similarity:
                 highest_similarity = similarity
-                best_match: str = self.responses[response]
+                best_match: str = self.responses[response]  # type: ignore
 
         return best_match, highest_similarity
 

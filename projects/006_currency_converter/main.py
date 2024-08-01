@@ -11,8 +11,8 @@ def load_rates(json_file: str) -> dict[str, dict]:
 # 3. Create the function
 def convert(amount: float, base: str, to: str, rates: dict[str, dict]) -> float:
     # 4. Make sure the user input is lowered
-    base: str = base.lower()
-    to: str = to.lower()
+    base: str = base.lower()  # type: ignore
+    to: str = to.lower()  # type: ignore
 
     # 5. Get the dictionaries
     from_rates: dict | None = rates.get(base)
@@ -20,13 +20,13 @@ def convert(amount: float, base: str, to: str, rates: dict[str, dict]) -> float:
 
     # 6. Return the rates
     if base == 'eur':
-        return amount * to_rates['rate']
+        return amount * to_rates['rate']  # type: ignore
     else:
-        return amount * (to_rates['rate'] / from_rates['rate'])
+        return amount * (to_rates['rate'] / from_rates['rate'])  # type: ignore
 
 
 # 7. Create a main entry point
-def main():
+def main() -> None:
     # 8. Load the rates
     rates: dict[str, dict] = load_rates('rates.json')
 
