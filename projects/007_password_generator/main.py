@@ -1,28 +1,26 @@
-# Import necessary functionality
+# 1. Import necessary functionality
 import secrets
 import string
 
 
-# Create a class
+# 2. Create a class
 class Password:
-    # Initialize our class
-    def __init__(self, length=12, uppercase=True, symbols=True) -> None:
+    # 3. Initialize our class
+    def __init__(self, length: int = 12, uppercase: bool = True, symbols: bool = True) -> None:
         self.length = length
         self.use_uppercase = uppercase
         self.use_symbols = symbols
 
-        # Get characters from the string module
+        # 4. Get characters from the string module
         self.base_characters: str = string.ascii_lowercase + string.digits
-        self.uppercase_letters: str = string.ascii_uppercase
-        self.symbols: str = string.punctuation
 
-        # Add symbols and uppercases characters if the user wants them
+        # 5. Add symbols and uppercases characters if the user wants them
         if self.use_uppercase:
-            self.base_characters += self.uppercase_letters
+            self.base_characters += string.ascii_uppercase
         if self.use_symbols:
-            self.base_characters += self.symbols
+            self.base_characters += string.punctuation
 
-    # Create a method to generate the password
+    # 6. Create a method to generate the password
     def generate(self) -> str:
         password: list[str] = []
 
@@ -32,7 +30,7 @@ class Password:
         return ''.join(password)
 
 
-# Create the main entry point
+# 7. Create the main entry point
 def main() -> None:
     password: Password = Password(length=20, uppercase=True, symbols=True)
     for i in range(10):
@@ -40,7 +38,7 @@ def main() -> None:
         print(f'{generated} ({len(generated)} chars)')
 
 
-# Run the script
+# 8. Run the script
 if __name__ == '__main__':
     main()
 
