@@ -29,7 +29,7 @@ class ChatBot:
             # 8. Update the highest similarity and best match if current similarity is higher
             if similarity > highest_similarity:
                 highest_similarity = similarity
-                best_match: str = self.responses[response]  # type: ignore
+                best_match = self.responses[response]
 
         return best_match, highest_similarity
 
@@ -49,7 +49,7 @@ class ChatBot:
 
 # 11. Create a main entry point
 def main() -> None:
-    responses = {
+    responses: dict[str, str] = {
         'hello': 'Hello! How are you today?',
         'how are you': 'Great, thanks! What about you?',
         'what time is it': 'GET_TIME',
